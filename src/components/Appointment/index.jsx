@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import classNames from "classnames";
+import "components/Appointment/styles.scss";
 import Header from "./Header";
 import Empty from "./Empty";
 import Show from "./Show";
@@ -7,7 +8,7 @@ import Confirm from "./Confirm";
 import Status from "./Status";
 import Error from "./Error";
 import Form from "./Form";
-import useVisualMode from "../hooks/useVisualMode";
+import useVisualMode from "hooks/useVisualMode";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
