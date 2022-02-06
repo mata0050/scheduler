@@ -1,0 +1,29 @@
+//Match the appointments given in the days object to those in the appointments object
+export function getAppointmentsForDay(state, day) {
+  const selectedDay = state.days.filter((singleDay) => singleDay.name === day);
+  let appointments = [];
+  // Get appointments if they exist
+  if (selectedDay[0] && selectedDay[0].appointments) {
+    appointments = selectedDay[0].appointments;
+  }
+  return appointments.map((id) => state.appointments[id]);
+}
+
+export function getInterview(state, interview) {
+  if (!interview) return null;
+  const { student, interviewer } = interview;
+  return {
+    student,
+    interviewer: state.interviewers[interviewer],
+  };
+}
+
+export function getInterviewersForDay(state, day) {
+  const selectedDay = state.days.filter((singleDay) => singleDay.name === day);
+  let dayInterviewers = [];
+  // Get interviewers if they exist
+  if (selectedDay[0] && selectedDay[0].interviewers) {
+    dayInterviewers = selectedDay[0].interviewers;
+  }
+  return dayInterviewers.map((id) => state.interviewers[id]);
+}
