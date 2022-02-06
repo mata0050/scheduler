@@ -7,7 +7,7 @@ import Confirm from "./Confirm";
 import Status from "./Status";
 import Error from "./Error";
 import Form from "./Form";
-import useVisualMode from "hooks/useVisualMode";
+import useVisualMode from "../hooks/useVisualMode";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";

@@ -1,5 +1,5 @@
 import React from "react";
-import "components/InterviewerList.scss";
+// import "./InterviewerList.scss";
 import InterviewerListItem from "components/InterviewerListItem";
 
 export default function InterviewerList({ interviewers, onChange, value }) {
